@@ -52,9 +52,13 @@ def mult_inverse(a,b):
         
 
 
-p=101
-q=113
-n=11413
+print("insert the values of p, q and n")
+p = int(input("p: "))
+q = int(input("q: "))
+n = int(input("n: "))
+#p=101
+#q=113
+#n=11413
 
 def phi(p,q):
     return (p-1)*(q-1) 
