@@ -51,30 +51,35 @@ def mult_inverse(a,b):
         return t
         
 
+def phi(p,q):
+    return (p-1)*(q-1) 
 
-print("insert the values of p, q and n")
-p = int(input("p: "))
-q = int(input("q: "))
-n = int(input("n: "))
+
 #p=101
 #q=113
 #n=11413
 
-def phi(p,q):
-    return (p-1)*(q-1) 
+print("insert the values of p, q and n")
+p = int(input("p: "))
+q = int(input("q: "))
+n = p * q #calcoliamo la public key
+print(f"n: {n}")
+# b = 3533
+b = int(input("b: "))
+# print(f"b: {b}")
 
-b = 3533
 print("The RSA Cryptosystem: ")
+
 """
 Please verify that gcd(φ(n), b) = 1 using the
 Euclidean Algo.
 """
-
-print(euclidean_algorithm(phi(p,q),b))
+print(f"gcd(φ(n), b):  {euclidean_algorithm(phi(p,q),b)[1]}")
+# print(euclidean_algorithm(phi(p,q),b))
 """
 Now compute Bob’s secret decryption exponent, a,
 using the Multiplicative Inverse Algorithm (Algorithm
 6.3, at slide #9).
 """
 a = mult_inverse(phi(p,q),b)
-print(a)
+print(f"a: {a}")
