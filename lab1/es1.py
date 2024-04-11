@@ -51,7 +51,7 @@ def extended_euclidean_algorithm(a, b):
 
 print("extended_euclidean_algorithm:")
 (r,s,t) = extended_euclidean_algorithm(a,b)
-print(f"{a}*{s} + {b}*{t} = {r}")
+print(f"s = {s}, t = {t}\n{a}*{s} + {b}*{t} = {r}")
 
 flag = input("Do you want to insert two numbers to try it out yourself? (y/n): ")
 if flag != "y":
@@ -63,4 +63,4 @@ print(f"gcd({c},{d}):")
 print(euclidean_algorithm(c,d))
 print("extended_euclidean_algorithm:")
 (r,s,t) = extended_euclidean_algorithm(c,d)
-print(f"{c}*{s} + {d}*{t} = {r}")
+print(f"s = {s}, t = {t}\n{c}*{s} + {d}*{t} = {r}")
