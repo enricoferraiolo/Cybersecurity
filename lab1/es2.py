@@ -24,11 +24,18 @@ def mult_inverse(a,b):
         r = A[0] - (q * B[0])
     if B[0] != 1:
         print("b has no inverse modulo a" )
-        return -1
     else:
         return t
 
-print("extended_euclidean_algorithm:")
-print(mult_inverse(17,101))
-print(mult_inverse(357,1234))
-print(mult_inverse(3125,9987))
+print("Multiplicative inverses:")
+print(f"17^-1 mod 101 = {mult_inverse(17,101)}")
+print(f"357^-1 mod 1234 = {mult_inverse(357,1234)}")
+print(f"3125^-1 mod 9987 = {mult_inverse(3125,9987)}")
+
+flag = input("Do you want to insert two numbers to try it out yourself? (y/n): ")
+if flag != "y":
+    exit()
+
+c=int(input("Insert a: "))
+d=int(input("Insert b: "))
+print(f"{c}^-1 mod {d} = {mult_inverse(c,d)}")

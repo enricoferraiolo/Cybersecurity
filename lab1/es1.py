@@ -10,14 +10,14 @@ def euclidean_algorithm(a, b):
     q=[]
     m= 1
     while r[m] != 0:
-        q.append(r[m-1] // r[m])  # Use integer division to get the quotient
-        r.append(r[m-1] - q[m-1] * r[m])  # Append new remainder to the list
+        q.append(r[m-1] // r[m])
+        r.append(r[m-1] - q[m-1] * r[m])
         m= m+1
     m=m-1
     return (q,r[m])
 
-a=int(input("Insert the first number: "))
-b=int(input("Insert the second number: "))
+a=57
+b=93
 print(f"gcd({a},{b}):")
 print(euclidean_algorithm(a,b))
 
@@ -51,4 +51,16 @@ def extended_euclidean_algorithm(a, b):
 
 print("extended_euclidean_algorithm:")
 (r,s,t) = extended_euclidean_algorithm(a,b)
-print(f"57*{s} + 93*{t} = {r}")
+print(f"{a}*{s} + {b}*{t} = {r}")
+
+flag = input("Do you want to insert two numbers to try it out yourself? (y/n): ")
+if flag != "y":
+    exit()
+
+c=int(input("Insert the first number: "))
+d=int(input("Insert the second number: "))
+print(f"gcd({c},{d}):")
+print(euclidean_algorithm(c,d))
+print("extended_euclidean_algorithm:")
+(r,s,t) = extended_euclidean_algorithm(c,d)
+print(f"{c}*{s} + {d}*{t} = {r}")
