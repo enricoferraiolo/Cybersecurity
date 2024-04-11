@@ -2,6 +2,3 @@
 
 ## **Lab 1** - Multiplicative inverse, Modular exponentiation and the RSA cryptosystem
 
-...
-
-## **Lab 2** - Hacking the INPS servers
