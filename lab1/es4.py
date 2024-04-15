@@ -1,3 +1,5 @@
+
+
 """
 The RSA Cryptosystem: an example
 Now, suppose Alice wants to encrypt the plaintext 9726
@@ -33,9 +35,21 @@ def square_and_multiply(x, c, n):
             y = (y*x) % n
     return y
 
-x = 9726
-c = 3533
+x = 9726 
+b = 3533
 n = 11413
 
-cyphertext = square_and_multiply(x, c, n)
-print(cyphertext)
+
+print(f"alece wants to send the plaintext {x} to bob")
+
+
+cyphertext= square_and_multiply(x, b, n)
+print(f"cyphertext {cyphertext}")
+
+
+a = 6597
+print(f"bob wants to decrypt the cyphertext {cyphertext} using the secret decryption exponent a: {a}")
+
+plaintext = square_and_multiply(cyphertext, a, n)
+
+print(f"plaintext {plaintext}")

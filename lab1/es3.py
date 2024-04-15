@@ -65,10 +65,13 @@ q = int(input("q: "))
 n = p * q #calcoliamo la public key
 print(f"n: {n}")
 # b = 3533
+
 b = int(input("b: "))
 # print(f"b: {b}")
 
-print("The RSA Cryptosystem: ")
+
+
+print("The RSA Cryptosystem")
 
 """
 Please verify that gcd(φ(n), b) = 1 using the
