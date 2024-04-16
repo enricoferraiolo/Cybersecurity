@@ -35,12 +35,13 @@ def square_and_multiply(x, c, n):
             y = (y*x) % n
     return y
 
-x = 9726 
-b = 3533
-n = 11413
+
+x = int(input("Insert x (9726): "))
+b = int(input("Insert x (3533): "))
+n = int(input("Insert x (11413): "))
 
 
-print(f"alece wants to send the plaintext {x} to bob")
+print(f"alice wants to send the plaintext {x} to bob")
 
 
 cyphertext= square_and_multiply(x, b, n)

@@ -60,13 +60,13 @@ def phi(p,q):
 #n=11413
 
 print("insert the values of p, q and n")
-p = int(input("p: "))
-q = int(input("q: "))
+p = int(input("p (101): "))
+q = int(input("q (113): "))
 n = p * q #calcoliamo la public key
 print(f"n: {n}")
 # b = 3533
 
-b = int(input("b: "))
+b = int(input("b (3533): "))
 # print(f"b: {b}")
 
 
