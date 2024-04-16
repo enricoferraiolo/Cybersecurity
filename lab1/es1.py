@@ -16,8 +16,8 @@ def euclidean_algorithm(a, b):
     m=m-1
     return (q,r[m])
 
-a=57
-b=93
+a=int(input("Insert a (57): "))
+b=int(input("Insert b (93): "))
 print(f"gcd({a},{b}):")
 print(euclidean_algorithm(a,b))
 
@@ -52,15 +52,3 @@ def extended_euclidean_algorithm(a, b):
 print("extended_euclidean_algorithm:")
 (r,s,t) = extended_euclidean_algorithm(a,b)
 print(f"s = {s}, t = {t}\n{a}*{s} + {b}*{t} = {r}")
-
-flag = input("Do you want to insert two numbers to try it out yourself? (y/n): ")
-if flag != "y":
-    exit()
-
-c=int(input("Insert the first number: "))
-d=int(input("Insert the second number: "))
-print(f"gcd({c},{d}):")
-print(euclidean_algorithm(c,d))
-print("extended_euclidean_algorithm:")
-(r,s,t) = extended_euclidean_algorithm(c,d)
-print(f"s = {s}, t = {t}\n{c}*{s} + {d}*{t} = {r}")
