@@ -40,7 +40,7 @@ We first use the `man du` to check if there are any options to see both all of t
 
 We then pipe the output into an `awk` command to check if the first element printed (the bites in size) is equal to 1033. Then we printed the file contents with the `cat` command.
 
-`du -ab | awk '{if ($1 == 1033) print}'
+`du -ab | awk '{if ($1 == 1033) print}'`
 
 ## Level 6 -> 7
 
@@ -64,6 +64,6 @@ We use the `strings data.txt` to list all the lines that contain human readable 
 
 `strings data.txt | grep "===*"`
 
- (the pass for the next level is G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s but i dont know if we have to do it)
+ (the pass for the next level is `G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s` but i dont know if we have to do it)
 
 
