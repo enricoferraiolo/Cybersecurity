@@ -27,7 +27,7 @@ def mult_inverse(a,b):
     else:
         return t
 
-a = int(input("Insert first number (17, 357, 3125): "))
-b = int(input("Insert second number (101, 1234, 9987): "))
+a = int(input("Insert first number (a) (101, 1234, 9987): "))
+b = int(input("Insert second number (b) (17, 357, 3125): "))
 print("Multiplicative inverse:")
-print(f"{a}^-1 mod {b} = {mult_inverse(b,a)}")
+print(f"{b}^-1 mod {a} = {mult_inverse(a,b)}")
